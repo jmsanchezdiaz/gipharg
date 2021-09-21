@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/gipharg/static/css/main.fa424698.chunk.css",
+    "main.js": "/gipharg/static/js/main.3a08d4ed.chunk.js",
+    "main.js.map": "/gipharg/static/js/main.3a08d4ed.chunk.js.map",
+    "runtime-main.js": "/gipharg/static/js/runtime-main.f510b154.js",
+    "runtime-main.js.map": "/gipharg/static/js/runtime-main.f510b154.js.map",
+    "static/js/2.219269c6.chunk.js": "/gipharg/static/js/2.219269c6.chunk.js",
+    "static/js/2.219269c6.chunk.js.map": "/gipharg/static/js/2.219269c6.chunk.js.map",
+    "index.html": "/gipharg/index.html",
+    "static/css/main.fa424698.chunk.css.map": "/gipharg/static/css/main.fa424698.chunk.css.map",
+    "static/js/2.219269c6.chunk.js.LICENSE.txt": "/gipharg/static/js/2.219269c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f510b154.js",
+    "static/js/2.219269c6.chunk.js",
+    "static/css/main.fa424698.chunk.css",
+    "static/js/main.3a08d4ed.chunk.js"
+  ]
+}
