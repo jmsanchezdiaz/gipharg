@@ -1,0 +1,8 @@
+.favourites {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+}

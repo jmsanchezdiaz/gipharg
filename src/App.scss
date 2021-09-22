@@ -1,0 +1,43 @@
+$backColor: #fbc531;
+$fontColor: #2f3640;
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  background: none;
+  border: none;
+  &:focus {
+    border: none;
+  }
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: $backColor;
+  color: $fontColor;
+}
+
+img {
+  max-width: 100%;
+}
