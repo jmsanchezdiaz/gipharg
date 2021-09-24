@@ -38,33 +38,38 @@ const Search = () => {
   }, []);
 
   return (
-    <div className="search">
-      <h1 className="search__title">Search</h1>
-      <form onSubmit={handleSubmit} className="search__form" action="">
-        <input
-          onChange={handleInput}
-          value={search_box}
-          type="text"
-          name="search_box"
-          id="search_box"
-          placeholder="example: cheeseburgers"
-        />
-        <input
-          max="4999"
-          min="10"
-          name="amount"
-          id="amount"
-          type="number"
-          value={amount}
-          onChange={handleInput}
-        />
-        <button className="search__button material-icons">search</button>
-        <button onClick={clearSearch} className="clear__button material-icons">
-          clear
-        </button>
-      </form>
-      <SearchResults results={results} />
-    </div>
+    <nav className="navbar">
+      <h2>GIPHARG</h2>
+      <div className="search">
+        <form onSubmit={handleSubmit} className="search__form" action="">
+          <input
+            onChange={handleInput}
+            value={search_box}
+            type="text"
+            name="search_box"
+            id="search_box"
+            placeholder="example: cheeseburgers"
+          />
+          <input
+            max="4999"
+            min="10"
+            name="amount"
+            id="amount"
+            type="number"
+            value={amount}
+            onChange={handleInput}
+          />
+          <button className="search__button material-icons">search</button>
+          <button
+            onClick={clearSearch}
+            className="clear__button material-icons"
+          >
+            clear
+          </button>
+        </form>
+        <SearchResults results={results} />
+      </div>
+    </nav>
   );
 };
 

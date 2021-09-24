@@ -1,4 +1,14 @@
+.navbar {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 .search {
+  flex: 1;
   &__title {
     margin: 20px 0;
   }
@@ -38,11 +48,11 @@
 
   &__button {
     color: #fff;
-    background-color: #333;
+    background-color: #616161;
   }
 
   .clear__button {
-    background-color: #c23616;
+    background-color: #616161;
     color: #fff;
   }
 }

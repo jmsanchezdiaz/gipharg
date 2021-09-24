@@ -8,9 +8,8 @@ function App() {
   return (
     <GifProvider>
       <div className="App">
-        <h1>GIPHARG</h1>
-        <hr />
         <Search />
+        <hr />
         <Trendings />
         <Favourites />
       </div>
