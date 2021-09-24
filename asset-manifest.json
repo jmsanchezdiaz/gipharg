@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/gipharg/static/css/main.0a041c59.chunk.css",
-    "main.js": "/gipharg/static/js/main.320b81bf.chunk.js",
-    "main.js.map": "/gipharg/static/js/main.320b81bf.chunk.js.map",
+    "main.css": "/gipharg/static/css/main.d58523f4.chunk.css",
+    "main.js": "/gipharg/static/js/main.a216b05f.chunk.js",
+    "main.js.map": "/gipharg/static/js/main.a216b05f.chunk.js.map",
     "runtime-main.js": "/gipharg/static/js/runtime-main.f510b154.js",
     "runtime-main.js.map": "/gipharg/static/js/runtime-main.f510b154.js.map",
     "static/js/2.2fca1413.chunk.js": "/gipharg/static/js/2.2fca1413.chunk.js",
     "static/js/2.2fca1413.chunk.js.map": "/gipharg/static/js/2.2fca1413.chunk.js.map",
     "index.html": "/gipharg/index.html",
-    "static/css/main.0a041c59.chunk.css.map": "/gipharg/static/css/main.0a041c59.chunk.css.map",
+    "static/css/main.d58523f4.chunk.css.map": "/gipharg/static/css/main.d58523f4.chunk.css.map",
     "static/js/2.2fca1413.chunk.js.LICENSE.txt": "/gipharg/static/js/2.2fca1413.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f510b154.js",
     "static/js/2.2fca1413.chunk.js",
-    "static/css/main.0a041c59.chunk.css",
-    "static/js/main.320b81bf.chunk.js"
+    "static/css/main.d58523f4.chunk.css",
+    "static/js/main.a216b05f.chunk.js"
   ]
 }
