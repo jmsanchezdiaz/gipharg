@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gipharg/static/css/main.d58523f4.chunk.css",
-    "main.js": "/gipharg/static/js/main.84ca6d0d.chunk.js",
-    "main.js.map": "/gipharg/static/js/main.84ca6d0d.chunk.js.map",
+    "main.js": "/gipharg/static/js/main.37cad886.chunk.js",
+    "main.js.map": "/gipharg/static/js/main.37cad886.chunk.js.map",
     "runtime-main.js": "/gipharg/static/js/runtime-main.f510b154.js",
     "runtime-main.js.map": "/gipharg/static/js/runtime-main.f510b154.js.map",
     "static/js/2.2fca1413.chunk.js": "/gipharg/static/js/2.2fca1413.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.f510b154.js",
     "static/js/2.2fca1413.chunk.js",
     "static/css/main.d58523f4.chunk.css",
-    "static/js/main.84ca6d0d.chunk.js"
+    "static/js/main.37cad886.chunk.js"
   ]
 }
