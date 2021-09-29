@@ -1,10 +1,21 @@
 import img from "./img.png";
+import "./Footer.scss";
 
 const Footer = () => {
-  console.log(img);
   return (
-    <footer id="footer">
-      <img src={img} alt="" />
+    <footer className="footer">
+      <img src={img} alt="powered-by-giphy" />
+      <h3>
+        Developed by{" "}
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://github.com/jmsanchezdiaz"
+        >
+          {" "}
+          Juan Manuel Sanchez Diaz
+        </a>
+      </h3>
     </footer>
   );
 };

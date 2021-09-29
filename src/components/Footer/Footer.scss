@@ -1,0 +1,17 @@
+$backColor: #dadde2;
+$fontColor: #333;
+
+.footer {
+  padding: 20px 10px;
+  margin: 0;
+  background: $backColor;
+  display: flex;
+  color: $fontColor;
+  align-items: center;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: $fontColor;
+  }
+}
