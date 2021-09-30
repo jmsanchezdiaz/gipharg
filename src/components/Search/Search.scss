@@ -34,12 +34,6 @@ $fontColor: #2f3640;
   &__form {
     display: flex;
     margin: 20px;
-    #amount {
-      width: 10%;
-      text-align: center;
-
-      @extend .input-style;
-    }
     #search_box {
       height: 30px;
       flex: 1;
@@ -58,5 +52,20 @@ $fontColor: #2f3640;
   &__button,
   .clear__button {
     color: $fontColor;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1.5rem;
+
+    &-handlers {
+      button {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #2f3640;
+      }
+    }
   }
 }

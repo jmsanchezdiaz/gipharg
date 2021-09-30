@@ -8,7 +8,7 @@ const Trendings = () => {
   const isMount = useRef(true);
 
   useEffect(() => {
-    apiCall("https://api.giphy.com/v1/gifs/trending?limit=10").then((res) => {
+    apiCall("https://api.giphy.com/v1/gifs/trending?limit=12").then((res) => {
       const { data } = res;
       if (isMount.current) {
         setTrendings(data);

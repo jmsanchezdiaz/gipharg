@@ -11,7 +11,7 @@ const GifButtons = ({ id, gif }) => {
           onClick={() => addToFavourites(gif)}
           className="gif__favourite  favourite__button"
         >
-          <span class="material-icons">star_border</span>
+          <span className="material-icons">star_border</span>
         </button>
       ) : (
         <button
@@ -20,7 +20,7 @@ const GifButtons = ({ id, gif }) => {
             favourite__button favourite__button--remove
             "
         >
-          <span class="material-icons">remove_circle_outline</span>
+          <span className="material-icons">remove_circle_outline</span>
         </button>
       )}
     </div>

@@ -9,9 +9,8 @@ const Search = () => {
   const isMount = useRef(true);
   const [formValues, handleInput, resetForm] = useForm({
     search_box: "",
-    amount: "10",
   });
-  const { search_box, amount } = formValues;
+  const { search_box } = formValues;
 
   const clearSearch = () => {
     resetForm();
@@ -20,7 +19,7 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const url = `https://api.giphy.com/v1/gifs/search?q=${search_box}&limit=${amount}`;
+    const url = `https://api.giphy.com/v1/gifs/search?q=${search_box}`;
     apiCall(url)
       .then((res) => {
         if (isMount.current) {
@@ -50,15 +49,6 @@ const Search = () => {
               name="search_box"
               id="search_box"
               placeholder="example: cheeseburgers"
-            />
-            <input
-              max="4999"
-              min="10"
-              name="amount"
-              id="amount"
-              type="number"
-              value={amount}
-              onChange={handleInput}
             />
             <button className="search__button material-icons">search</button>
             <button
