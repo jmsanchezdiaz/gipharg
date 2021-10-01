@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { usePagination } from "../../custom hooks/usePagination";
 import Gif from "../Gif/Gif";
 
@@ -16,6 +16,7 @@ const SearchResults = ({ results }) => {
 
   useEffect(() => {
     return () => resetPagination();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [results]);
 
   return (

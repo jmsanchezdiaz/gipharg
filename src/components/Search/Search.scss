@@ -39,6 +39,10 @@ $fontColor: #2f3640;
       flex: 1;
       width: 100%;
       @extend .input-style;
+
+      &:focus {
+        border-bottom: 2px solid $fontColor;
+      }
     }
   }
 
@@ -58,13 +62,21 @@ $fontColor: #2f3640;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    font-size: 1.5rem;
-
+    font-size: 1.2rem;
+    align-items: center;
     &-handlers {
       button {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        color: #2f3640;
+        color: $fontColor;
+        border: 2px solid $fontColor;
+        margin: 5px;
+        border-radius: 4px;
+        transition: background, color 1s ease;
+        &:hover {
+          background-color: $fontColor;
+          color: $backColor;
+        }
       }
     }
   }

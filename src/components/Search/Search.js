@@ -43,6 +43,7 @@ const Search = () => {
         <div className="search">
           <form onSubmit={handleSubmit} className="search__form" action="">
             <input
+              autoFocus
               onChange={handleInput}
               value={search_box}
               type="text"

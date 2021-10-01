@@ -32,7 +32,7 @@ export const usePagination = (initState, maxElements) => {
   useEffect(() => {
     const filtered = initState.slice(curPage, nxtPage);
     setFiltered(filtered);
-  }, [initState, pageNumber, curPage, nxtPage]);
+  }, [initState, pageNumber, curPage, nxtPage, maxElements]);
 
   return {
     filtered,
