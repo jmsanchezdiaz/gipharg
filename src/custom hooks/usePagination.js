@@ -15,6 +15,7 @@ export const usePagination = (initState, maxElements) => {
 
   const goNextPage = () => {
     if (curPage + maxElements < initState.length) {
+      window.scrollTo(0, 0);
       setCurPage(curPage + maxElements);
       setNxtPage(nxtPage + maxElements);
       setPageNumber(pageNumber + 1);
@@ -23,6 +24,7 @@ export const usePagination = (initState, maxElements) => {
 
   const goPrevPage = () => {
     if (curPage > 0) {
+      window.scrollTo(0, 0);
       setCurPage(curPage - maxElements);
       setNxtPage(nxtPage - maxElements);
       setPageNumber(pageNumber - 1);
