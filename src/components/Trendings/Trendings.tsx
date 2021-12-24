@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { apiCall } from "../../helpers/apiCall";
+import { GifType } from "../../types/interfaces";
 import TrendingList from "./TrendingList";
 import "./Trendings.scss";
 
-const Trendings = () => {
-  const [trendings, setTrendings] = useState([]);
+
+const Trendings: React.FC = () => {
+  const [trendings, setTrendings] = useState<GifType[]>([]);
   const isMount = useRef(true);
 
   useEffect(() => {

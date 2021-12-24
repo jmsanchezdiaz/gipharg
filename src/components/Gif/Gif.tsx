@@ -1,7 +1,12 @@
+import { GifType } from "../../types/interfaces";
 import "./Gif.scss";
 import GifButtons from "./GifButtons";
 
-const Gif = ({ gif }) => {
+interface Props {
+  gif : GifType
+}
+
+const Gif:React.FC<Props> = ({ gif }) => {
   const { id, username: gifAlt, images, embed_url: gifLink } = gif;
   const url = images ? images.downsized.url : "";
   return (

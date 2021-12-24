@@ -1,7 +1,13 @@
 import React from "react";
+import { GifType } from "../../types/interfaces";
 import Gif from "../Gif/Gif";
 
-const TrendingList = ({ trendings }) => {
+interface Props{
+  trendings: GifType[]
+}
+
+
+const TrendingList: React.FC<Props> = ({ trendings }) => {
   return (
     <div>
       <ul className="trendings__list">

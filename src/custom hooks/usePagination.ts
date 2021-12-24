@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 
-export const usePagination = (initState, maxElements) => {
-  const [pageState, setPageState] = useState({
+interface PageState {
+  curIndex: number;
+  nxtIndex: number;
+  pageNumber: number;
+}
+
+export const usePagination = <T>(initState: T[] = [], maxElements: number) => {
+  const [pageState, setPageState] = useState<PageState>({
     curIndex: 0,
     nxtIndex: maxElements,
     pageNumber: 1,
   });
-  const [filtered, setFiltered] = useState(initState);
+  const [filtered, setFiltered] = useState<T[]>(initState);
 
   const { curIndex, nxtIndex, pageNumber } = pageState;
 

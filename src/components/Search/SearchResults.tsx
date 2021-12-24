@@ -1,7 +1,12 @@
 import { usePagination } from "../../custom hooks/usePagination";
+import { GifType } from "../../types/interfaces";
 import Gif from "../Gif/Gif";
 
-const SearchResults = ({ results }) => {
+interface Props {
+  results: GifType[],
+}
+
+const SearchResults: React.FC<Props> = ({ results }) => {
   const {
     filtered,
     pageNumber,

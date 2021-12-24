@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import GifContext from "../../gifProvider/GifProvider";
+import { GifContextType } from "../../types/interfaces";
 import FavouriteList from "./FavouriteList";
 import "./Favourites.scss";
 
-const Favourites = () => {
-  const { favourites } = useContext(GifContext);
+const Favourites: React.FC = () => {
+  const { favourites } = useContext<GifContextType>(GifContext);
   return (
     <div className="favourites">
       {favourites.length > 0 && (

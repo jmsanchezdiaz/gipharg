@@ -5,7 +5,7 @@ import Search from "./components/Search/Search";
 import Trendings from "./components/Trendings/Trendings";
 import { GifProvider } from "./gifProvider/GifProvider";
 
-function App() {
+const App: React.FC = ()=>{
   return (
     <GifProvider>
       <div className="App">

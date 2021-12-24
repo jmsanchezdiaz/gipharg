@@ -1,23 +1,26 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { useForm } from "../../custom hooks/useForm";
 import { apiCall } from "../../helpers/apiCall";
+import { GifType } from "../../types/interfaces";
 import "./Search.scss";
 import SearchResults from "./SearchResults";
 
-const Search = () => {
-  const [results, setResults] = useState([]);
+
+
+const Search: React.FC = () => {
+  const [results, setResults] = useState<GifType[]>([]);
   const isMount = useRef(true);
-  const [formValues, handleInput, resetForm] = useForm({
+  const [formValues, handleInput, resetForm] = useForm<any>({
     search_box: "",
   });
-  const { search_box } = formValues;
+  const search_box = formValues['search_box'] as string;
 
   const clearSearch = () => {
     resetForm();
     setResults([]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const url = `https://api.giphy.com/v1/gifs/search?q=${search_box}`;
     apiCall(url)

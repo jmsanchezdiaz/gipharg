@@ -1,7 +1,13 @@
 import React, { useContext } from "react";
 import GifContext from "../../gifProvider/GifProvider";
+import { GifType } from "../../types/interfaces";
 
-const GifButtons = ({ id, gif }) => {
+interface Props{
+  id: GifType['id'],
+  gif: GifType
+}
+
+const GifButtons:React.FC<Props> = ({ id, gif }) => {
   const { isOnFavourite, addToFavourites, removeFromFavourites } =
     useContext(GifContext);
   return (

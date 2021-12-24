@@ -1,7 +1,12 @@
 import React from "react";
+import { GifType } from "../../types/interfaces";
 import Gif from "../Gif/Gif";
 
-const FavouriteList = ({ favourites }) => {
+interface Props{
+  favourites: GifType[]
+}
+
+const FavouriteList: React.FC<Props> = ({ favourites }) => {
   return (
     <ul className="favourites__list">
       {favourites?.map((gif) => (
