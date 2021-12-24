@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { usePagination } from "../../custom hooks/usePagination";
 import Gif from "../Gif/Gif";
 
