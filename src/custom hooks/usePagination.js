@@ -1,47 +1,65 @@
 import { useEffect, useState } from "react";
 
 export const usePagination = (initState, maxElements) => {
-  const [curPage, setCurPage] = useState(0);
-  const [nxtPage, setNxtPage] = useState(maxElements);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageState, setPageState] = useState({
+    curIndex: 0,
+    nxtIndex: maxElements,
+    pageNumber: 1,
+  });
   const [filtered, setFiltered] = useState(initState);
-  const amountOfPages = Math.ceil(initState.length / maxElements);
 
-  const resetPagination = () => {
-    setCurPage(0);
-    setNxtPage(maxElements);
-    setPageNumber(1);
-  };
+  const { curIndex, nxtIndex, pageNumber } = pageState;
+
+  const amountOfPages = Math.ceil(initState.length / maxElements);
+  const amountOfElements =
+    pageNumber * maxElements > initState.length
+      ? initState.length
+      : pageNumber * maxElements;
+
+  useEffect(() => {
+    const resetPagination = () => {
+      setPageState({
+        curIndex: 0,
+        nxtIndex: maxElements,
+        pageNumber: 1,
+      });
+    };
+    resetPagination();
+  }, [initState, maxElements]);
 
   const goNextPage = () => {
-    if (curPage + maxElements < initState.length) {
-      window.scrollTo(0, 0);
-      setCurPage(curPage + maxElements);
-      setNxtPage(nxtPage + maxElements);
-      setPageNumber(pageNumber + 1);
+    if (curIndex + maxElements < initState.length) {
+      setPageState({
+        curIndex: curIndex + maxElements,
+        nxtIndex: nxtIndex + maxElements,
+        pageNumber: pageNumber + 1,
+      });
+      window.scroll(0, 0);
     }
   };
 
   const goPrevPage = () => {
-    if (curPage > 0) {
-      window.scrollTo(0, 0);
-      setCurPage(curPage - maxElements);
-      setNxtPage(nxtPage - maxElements);
-      setPageNumber(pageNumber - 1);
+    if (curIndex > 0) {
+      setPageState({
+        curIndex: curIndex - maxElements,
+        nxtIndex: nxtIndex - maxElements,
+        pageNumber: pageNumber - 1,
+      });
+      window.scroll(0, 0);
     }
   };
 
   useEffect(() => {
-    const filtered = initState.slice(curPage, nxtPage);
+    const filtered = initState.slice(curIndex, nxtIndex);
     setFiltered(filtered);
-  }, [initState, pageNumber, curPage, nxtPage, maxElements]);
+  }, [initState, pageNumber, curIndex, nxtIndex, maxElements]);
 
   return {
     filtered,
+    amountOfElements,
     pageNumber,
     goNextPage,
     goPrevPage,
     amountOfPages,
-    resetPagination,
   };
 };

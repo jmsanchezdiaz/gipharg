@@ -9,15 +9,11 @@ const SearchResults = ({ results }) => {
     goNextPage,
     goPrevPage,
     amountOfPages,
-    resetPagination,
+
   } = usePagination(results, 12);
   const isNotLastPage = pageNumber < amountOfPages;
   const isNotFirstPage = pageNumber > 1;
 
-  useEffect(() => {
-    return () => resetPagination();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [results]);
 
   return (
     <div>
